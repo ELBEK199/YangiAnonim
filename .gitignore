@@ -1,0 +1,113 @@
+#############################
+# 1. Python/Django
+#############################
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+db.sqlite3
+*.sqlite3
+*.db
+*.log
+*.pot
+*.mo
+
+# Django media & static build
+/media/
+/staticfiles/
+
+# Django migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# Python environment
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+.eggs/
+*.egg-info/
+
+# Local settings & secrets
+.env
+.env.*
+*.env
+secrets.json
+
+#############################
+# 2. NodeJS/React/Vite
+#############################
+# Node modules, build
+node_modules/
+dist/
+build/
+.cache/
+.npm/
+.yarn/
+.pnpm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # (optional, agar lockfile’ni saqlamoqchi bo‘lmasangiz)
+pnpm-lock.yaml
+
+# Vite/Next.js
+.next/
+out/
+.vite/
+
+# Frontend local env
+*.env.local
+frontend/.env
+frontend/.env.*
+
+#############################
+# 3. Docker va Container fayllar
+#############################
+docker-compose.override.yml
+*.pid
+
+#############################
+# 4. OS & IDE settings
+#############################
+# VS Code, PyCharm, WebStorm
+.idea/
+.vscode/
+*.iml
+
+# Mac OS
+.DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Linux
+*~
+
+#############################
+# 5. Coverage, Test, Docs
+#############################
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+.nox/
+docs/_build/
+
+#############################
+# 6. Git ignore itself (for safety)
+#############################
+.git/
+
+#############################
+# 7. Additional & custom (if needed)
+#############################
+# backup or export files
+*.bak
+*.swp
+*.swo
+*.tmp
+# your special folders here
+# e.g. /export/, /backups/, /legacy/
