@@ -7,8 +7,8 @@ from .serializers import (
     UserDetailSerializer,
     CustomTokenObtainPairSerializer
 )
-from org_survey.users.permissions import IsAdminUserCustom
-from org_survey.users.services import (
+from apps.users.services.permissions import IsAdminUserCustom
+from apps.users.services.services import (
     create_user_service,
     update_user_service,
     delete_user_service,

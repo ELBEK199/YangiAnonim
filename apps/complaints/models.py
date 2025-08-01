@@ -13,7 +13,7 @@ COMPLAINT_CHOICES = [
 ]
 
 class Complaint(models.Model):
-    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name="complaints")
+    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name="services")
     complaint_type = models.CharField(max_length=30, choices=COMPLAINT_CHOICES)
     custom_text = models.TextField(blank=True)  # Faqat “shaxsiy_fikr” uchun
     created_at = models.DateTimeField(auto_now_add=True)

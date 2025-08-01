@@ -11,13 +11,13 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Loyihani nusxa ko‘chiramiz
 COPY . .
 
-# Django static va media papkalarini yaratamiz
-RUN mkdir -p /app/static /app/media
+# Django services va media papkalarini yaratamiz
+RUN mkdir -p /app/services /app/media
 
 # Port
 EXPOSE 8000
 
-# Django collectstatic (static fayllarni tayyorlab beradi)
+# Django collectstatic (services fayllarni tayyorlab beradi)
 RUN python manage.py collectstatic --noinput
 
 # Runserver (dev uchun)

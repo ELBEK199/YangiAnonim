@@ -8,7 +8,7 @@ from .views import (
 
 urlpatterns = [
     # Oddiy foydalanuvchi murojaat yuboradi (login talab qilinmaydi)
-    path('create/', ComplaintCreateView.as_view(), name='complaint-create'),
+    path('Create/', ComplaintCreateView.as_view(), name='complaint-Create'),
 
     # Admin uchun barcha murojaatlar
     path('', ComplaintListView.as_view(), name='complaint-list'),

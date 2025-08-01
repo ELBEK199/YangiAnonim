@@ -1,7 +1,6 @@
 import uuid
 from apps.companies.models import Company
 from django.core.exceptions import ObjectDoesNotExist
-from django.conf import settings
 import qrcode
 from io import BytesIO
 from django.core.files.base import ContentFile

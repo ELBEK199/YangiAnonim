@@ -1,16 +1,17 @@
+from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from org_survey.static.services import (
+from apps.statistics.services.services import (
     get_stats_by_type,
     get_stats_by_company,
     get_complaints_filtered,
 )
 from apps.complaints.serializers import ComplaintListSerializer
-from org_survey.users.permissions import IsAdminUserCustom  # faqat admin uchun
+from apps.users.services.permissions import IsAdminUserCustom  # faqat admin uchun
 
 
 class StatsByTypeView(APIView):
-    permission_classes = [IsAdminUserCustom]
+    permission_classes = [AllowAny]
 
     def get(self, request):
         period = request.GET.get('period')  # 'month', 'week', 'year'
@@ -21,7 +22,7 @@ class StatsByTypeView(APIView):
 
 
 class StatsByCompanyView(APIView):
-    permission_classes = [IsAdminUserCustom]
+    permission_classes = [AllowAny]
 
     def get(self, request):
         period = request.GET.get('period')
@@ -32,7 +33,7 @@ class StatsByCompanyView(APIView):
 
 
 class ComplaintsFilteredView(APIView):
-    permission_classes = [IsAdminUserCustom]
+    permission_classes = [AllowAny]
 
     def get(self, request):
         complaint_type = request.GET.get('type')

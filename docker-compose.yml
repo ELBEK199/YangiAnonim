@@ -15,7 +15,7 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
-      - static_data:/app/static
+      - static_data:/app/services
       - media_data:/app/media
     ports:
       - "8000:8000"
